@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.x]
 
     steps:
     - name: Checkout repository
@@ -26,6 +26,9 @@ jobs:
         
     - name: frontend
       run: cd frontend
+      
+    - name: ls
+      run: ls
 
     - name: Install dependencies
       run: npm install
